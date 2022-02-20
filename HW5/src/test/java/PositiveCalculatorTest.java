@@ -21,6 +21,8 @@ public class PositiveCalculatorTest {
     public void positiveTest (String operator,String input1, String input2, String result){
         Assert.assertEquals(Calculator.execute(operator,input1,input2), result,"Позитивный тест не пройден");
     }
+
+
 }
 
 

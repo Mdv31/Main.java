@@ -11,7 +11,7 @@ public class Calculator {
             case ("*"):{result= Integer.toString(a*b) ; break;}
             case ("/"):{result= Integer.toString(a/b) ; break;}
             default: System.out.println("Оператор "+operator+" не поддерживается");}
-        System.out.println("Результат:");
+        System.out.println("Результат: "+result);
         return result;
     }
 }
