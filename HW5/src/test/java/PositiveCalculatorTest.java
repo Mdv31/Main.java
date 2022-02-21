@@ -4,8 +4,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-
-@Test()
 public class PositiveCalculatorTest {
 
     @DataProvider
@@ -18,11 +16,9 @@ public class PositiveCalculatorTest {
     }
 
     @Test(dataProvider = "positiveTest")
-    public void positiveTest (String operator,String input1, String input2, String result){
-        Assert.assertEquals(Calculator.execute(operator,input1,input2), result,"Позитивный тест не пройден");
+    public void positiveTest (String operator,String input1, String input2, String result) {
+        Assert.assertEquals(Calculator.execute(operator, input1, input2), result, "Позитивный тест не пройден");
     }
-
-
 }
 
 
