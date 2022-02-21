@@ -8,24 +8,24 @@ public class Calculator {
 
         String result = "";
         try {
-            int a = Integer.parseInt(input1);
-            int b = Integer.parseInt(input2);
+            float a = Float.parseFloat(input1);
+            float b = Float.parseFloat(input2);
 
             switch (operator) {
                 case ("+"): {
-                    result = Integer.toString(a + b);
+                    result = Float.toString(a + b);
                     break;
                 }
                 case ("-"): {
-                    result = Integer.toString(a - b);
+                    result = Float.toString(a - b);
                     break;
                 }
                 case ("*"): {
-                    result = Integer.toString(a * b);
+                    result = Float.toString(a * b);
                     break;
                 }
                 case ("/"): {
-                    result = Integer.toString(a / b);
+                    result = Float.toString(a / b);
                     break;
                 }
                 default:
