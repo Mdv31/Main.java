@@ -1,11 +1,10 @@
 package model;
 
 public class Calculator {
-    public static String execute(String params){
-        String[] params1 = params.split(" ");
-        String input1=params1[0];
-        String input2=params1[2];
-        String operator=params1[1];
+    public static String execute(String[] params){
+        String input1=params[0];
+        String input2=params[1];
+        String operator=params[2];
 
         String result = "";
         try {
