@@ -18,7 +18,7 @@ public class NegativeCalculatorTest {
     @Test(dataProvider = "negativeTest")
     public void negativeTest (String operator,String input1, String input2) {
         String[] params = new String[0];
-        params[0]= input1+" "+operator+" "+input2;
+        params[0]= operator+" "+input1+" "+input2;
         //Assert.assertNotNull(Calculator.execute(params[]),"Значение не 0");
     }
 }

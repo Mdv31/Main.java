@@ -18,7 +18,7 @@ public class PositiveCalculatorTest {
     @Test(dataProvider = "positiveTest")
     public void positiveTest (String operator,String input1, String input2, String result) {
         String[] params = new String[0];
-        params[0]= input1+" "+operator+" "+input2;
+        params[0]= operator+" "+input1+" "+input2;
         Assert.assertEquals(Calculator.execute(params), result, "Позитивный тест не пройден");
     }
 }
