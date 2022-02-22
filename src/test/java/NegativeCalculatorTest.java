@@ -8,35 +8,28 @@ import org.testng.Assert;
 public class NegativeCalculatorTest {
 
     @DataProvider
-    public Object[][]negativeTest (){
+    public Object[][]negativeData (){
         return new Object[][]{
-                {"+","4","a"},
+                {"+","4",""},
                 {"-","5","-3"},
                 {"*","2","50"},
                 {"/","8","0"}};
     }
-//, expectedExceptions  = CalculatorException.class
-    @Test(dataProvider = "negativeTest")
+    @Test(dataProvider = "negativeData")//, expectedExceptions = CalculatorException.class)
     public void negativeTest (String operator,String input1, String input2) {
         String[] params = new String[3];
         params[0] = operator;
         params[1] = input1;
         params[2] = input2;
-        //Assert.assertNotNull(Calculator.execute(params),"Значение не 0");
-        //Assert.assertNull(Calculator.execute(params));
         Exception ex = null;
+        boolean flag;
         try {
             Calculator.execute(params);
-        } catch (Exception e) {
-            ex = e;
+            flag=false;
+        } catch (CalculatorException e) {
+            flag=true;
         }
-        Assert.assertNull(ex);
-
-        //Assert.assertFalse(false);
-        //Assert.fail(Calculator.execute(params));
-        //Assert.assertTrue(Calculator.execute(params).isEmpty());
-        //Assert.assertTrue(Calculator.execute(params).isEmpty());
-        //Assert.assertEquals(Calculator.execute(params),Calculator.execute(params));
-        //Assert.fail("Exception expected.");
+        Assert.assertTrue(flag);
+       // Calculator.execute(params);
     }
 }

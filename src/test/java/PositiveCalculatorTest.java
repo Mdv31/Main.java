@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class PositiveCalculatorTest {
 
     @DataProvider
-    public Object[][]positiveTest (){
+    public Object[][]positiveData  (){
         return new Object[][]{
             {"+","4","4","8"},
             {"-","5","3","2"},
@@ -15,7 +15,7 @@ public class PositiveCalculatorTest {
             {"/","8","2","4"}};
     }
 
-    @Test(dataProvider = "positiveTest")
+    @Test(dataProvider = "positiveData")
     public void positiveTest (String operator,String input1, String input2, String result) {
         String[] params = new String[3];
         params[0]= operator;
