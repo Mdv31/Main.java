@@ -2,12 +2,9 @@ package model;
 
 public class Calculator {
     public static String execute(String[] params){
-
         String operator=params[0];
         String input1=params[1];
         String input2=params[2];
-
-
         String result = "";
         try {
             float a = Float.parseFloat(input1);

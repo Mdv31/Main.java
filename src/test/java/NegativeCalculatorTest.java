@@ -15,8 +15,8 @@ public class NegativeCalculatorTest {
                 {"*","2","50"},
                 {"/","8","0"}};
     }
-
-    @Test(dataProvider = "negativeTest", expectedExceptions  = CalculatorException.class)
+//, expectedExceptions  = CalculatorException.class
+    @Test(dataProvider = "negativeTest")
     public void negativeTest (String operator,String input1, String input2) {
         String[] params = new String[3];
         params[0]= operator;
@@ -25,7 +25,11 @@ public class NegativeCalculatorTest {
         //Assert.assertNotNull(Calculator.execute(params),"Значение не 0");
         //Assert.assertNull(Calculator.execute(params));
         Calculator.execute(params);
-        Assert.assertFalse(true);
+        //Assert.assertFalse(false);
         //Assert.fail(Calculator.execute(params));
+        //Assert.assertTrue(Calculator.execute(params).isEmpty());
+        //Assert.assertTrue(Calculator.execute(params).isEmpty());
+        //Assert.assertEquals(Calculator.execute(params),Calculator.execute(params));
+        //Assert.fail("Exception expected.");
     }
 }
