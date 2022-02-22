@@ -14,7 +14,7 @@ public class NegativeCalculatorTest {
                 {"*","2","50"},
                 {"/","8","0"}};
     }
-    @Test(dataProvider = "negativeData")//, expectedExceptions = CalculatorException.class)
+    @Test(dataProvider = "negativeData", expectedExceptions = CalculatorException.class)
     public void negativeTest (String operator,String input1, String input2){
             String[] params = new String[3];
             params[0] = operator;
