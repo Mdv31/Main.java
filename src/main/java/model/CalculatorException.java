@@ -1,7 +1,7 @@
 package model;
 
 
-public class CalculatorException extends RuntimeException {
+public class CalculatorException extends NumberFormatException {
     public CalculatorException(String message) {
 
         super(message);

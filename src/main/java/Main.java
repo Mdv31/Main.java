@@ -21,6 +21,7 @@ public class Main {
         params[2] = in1.nextLine();
 
         Calculator.execute(params);
+
     }
 
 }

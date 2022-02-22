@@ -1,12 +1,14 @@
 package model;
 
 public class Calculator {
-    public static String execute(String[] params){
-        String operator=params[0];
-        String input1=params[1];
-        String input2=params[2];
-        String result = "";
+    public static String execute(String[] params) {
+        String result = null;
         try {
+            String operator = params[0];
+            String input1 = params[1];
+            String input2 = params[2];
+            result = "";
+
             float a = Float.parseFloat(input1);
             float b = Float.parseFloat(input2);
 
@@ -32,8 +34,10 @@ public class Calculator {
             }
             System.out.println("Результат: " + result);
 
-        }catch (CalculatorException e){
-            e.printStackTrace();
-            }
-        return result;}
+
+        } catch (CalculatorException e) {
+            //e.printStackTrace();
+        }
+        return result;
+    }
 }
