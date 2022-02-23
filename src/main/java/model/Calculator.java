@@ -26,13 +26,14 @@ public class Calculator {
                     break;
                 }
                 case ("/"): {
-                    result = Float.toString(a / b);
+                    if (b==0){throw new CalculatorException("Бросаю исключения калькулятора, деление на 0");}
+                    else result = Float.toString(a / b);
                     break;
                 }
                 default:
                     System.out.println("Оператор " + operator + " не поддерживается");
             }
-            System.out.println("Результат: " + result);
+            //System.out.println("Результат: " + result);
         } catch (Exception e) {
             e.printStackTrace();
             throw new CalculatorException("Бросаю исключения калькулятора");
