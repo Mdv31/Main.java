@@ -33,7 +33,7 @@ public class Calculator {
                 default:
                     throw new CalculatorException("Бросаю исключения калькулятора, оператор не поддерживается");
             }
-            System.out.println("Результат: " + result);
+            System.out.println(result);
         } catch (Exception e) {
             e.printStackTrace();
             throw new CalculatorException("Бросаю исключения калькулятора");

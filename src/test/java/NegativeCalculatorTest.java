@@ -12,7 +12,7 @@ public class NegativeCalculatorTest {
     public Object[][]negativeData (){
         return new Object[][]{
                 {"plus","1","1"},
-                {"+","4","ффф"},
+                {"+","-2147483648","-1"},
                 {"-","one","two"},
                 {"+","null","null"},
                 {"-","","2"},
