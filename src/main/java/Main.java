@@ -7,18 +7,19 @@ public class Main {
 
     public static void main(String[] args) {
         String[] params = new String[3];
+        Scanner in = new Scanner(System.in);
 
         System.out.println("Ввести оператор (+,-,*,/");
-        Scanner in2 = new Scanner(System.in);
-        params[0] = in2.nextLine();
+
+        params[0] = in.nextLine();
 
         System.out.println("Ввести первую цифру");
-        Scanner in = new Scanner(System.in);
+
         params[1] = in.nextLine();
 
         System.out.println("Ввести вторую цифру");
-        Scanner in1 = new Scanner(System.in);
-        params[2] = in1.nextLine();
+
+        params[2] = in.nextLine();
 
         Calculator.execute(params);
 
