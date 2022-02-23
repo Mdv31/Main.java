@@ -9,31 +9,31 @@ public class Calculator {
             String input2 = params[2];
             result = "";
 
-            float a = Float.parseFloat(input1);
-            float b = Float.parseFloat(input2);
+            double a = Double.parseDouble(input1);
+            double b = Double.parseDouble(input2);
 
             switch (operator) {
                 case ("+"): {
-                    result = Float.toString(a + b);
+                    result = Double.toString(a + b);
                     break;
                 }
                 case ("-"): {
-                    result = Float.toString(a - b);
+                    result = Double.toString(a - b);
                     break;
                 }
                 case ("*"): {
-                    result = Float.toString(a * b);
+                    result = Double.toString(a * b);
                     break;
                 }
                 case ("/"): {
                     if (b==0){throw new CalculatorException("Бросаю исключения калькулятора, деление на 0");}
-                    else result = Float.toString(a / b);
+                    else result = Double.toString(a / b);
                     break;
                 }
                 default:
                     throw new CalculatorException("Бросаю исключения калькулятора, оператор не поддерживается");
             }
-            //System.out.println("Результат: " + result);
+            System.out.println("Результат: " + result);
         } catch (Exception e) {
             e.printStackTrace();
             throw new CalculatorException("Бросаю исключения калькулятора");
