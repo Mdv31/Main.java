@@ -33,10 +33,9 @@ public class Calculator {
                     System.out.println("Оператор " + operator + " не поддерживается");
             }
             System.out.println("Результат: " + result);
-
-
-        } catch (CalculatorException e) {
-            //e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new CalculatorException("Бросаю исключения калькулятора");
         }
         return result;
     }

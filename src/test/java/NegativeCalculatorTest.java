@@ -19,25 +19,12 @@ public class NegativeCalculatorTest {
                 {"*","2","5 0"},
                 {"/","8","null"}};
     }
-    @Test(dataProvider = "negativeData")/*, expectedExceptions = {
-            NumberFormatException.class, CalculatorException.class, ArithmeticException.class})*/
+    @Test(dataProvider = "negativeData", expectedExceptions = {CalculatorException.class})
     public void negativeTest (String operator,String input1, String input2){
             String[] params = new String[3];
             params[0] = operator;
             params[1] = input1;
             params[2] = input2;
-
-            boolean flag;
-            try {
-                Calculator.execute(params);
-                flag = false;
-            }catch (CalculatorException e) {
-                flag = true;
-            }
-            catch (NumberFormatException e1){
-                flag = true;
-            }
-
-        Assert.assertTrue(flag, "исключение получено");
+            Calculator.execute(params);
     }
 }
