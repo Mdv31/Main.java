@@ -12,6 +12,10 @@ public class Calculator {
             double a = Double.parseDouble(input1);
             double b = Double.parseDouble(input2);
 
+            if (-2147483647 > a || b > 2147483647) {
+                throw new CalculatorException("Бросаю исключения калькулятора, число за границей long int");
+            }
+
             switch (operator) {
                 case ("+"): {
                     result = Double.toString(a + b);
