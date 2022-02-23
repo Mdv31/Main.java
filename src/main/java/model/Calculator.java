@@ -31,7 +31,7 @@ public class Calculator {
                     break;
                 }
                 default:
-                    System.out.println("Оператор " + operator + " не поддерживается");
+                    throw new CalculatorException("Бросаю исключения калькулятора, оператор не поддерживается");
             }
             //System.out.println("Результат: " + result);
         } catch (Exception e) {
