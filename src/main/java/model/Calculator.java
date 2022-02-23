@@ -12,7 +12,21 @@ public class Calculator {
             double a = Double.parseDouble(input1);
             double b = Double.parseDouble(input2);
 
-            if (-2147483647 > a || b > 2147483647) {
+            if (-2147483647 >= a || b >= 2147483647) {
+                throw new CalculatorException("Бросаю исключения калькулятора, число за границей long int");
+            }
+            double r1=a+b;
+            double r2=a*b;
+            if (r1 > 2147483647) {
+                throw new CalculatorException("Бросаю исключения калькулятора, число за границей long int");
+            }
+            if (r2 > 2147483647) {
+                throw new CalculatorException("Бросаю исключения калькулятора, число за границей long int");
+            }
+            if (r1 < -2147483647) {
+                throw new CalculatorException("Бросаю исключения калькулятора, число за границей long int");
+            }
+            if (r2 < -2147483647) {
                 throw new CalculatorException("Бросаю исключения калькулятора, число за границей long int");
             }
 
