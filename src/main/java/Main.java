@@ -9,15 +9,15 @@ public class Main {
         String[] params = new String[3];
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Ввести оператор (+,-,*,/");
+        //System.out.println("Ввести оператор (+,-,*,/");
 
         params[0] = in.nextLine();
 
-        System.out.println("Ввести первую цифру");
+        //System.out.println("Ввести первую цифру");
 
         params[1] = in.nextLine();
 
-        System.out.println("Ввести вторую цифру");
+        //System.out.println("Ввести вторую цифру");
 
         params[2] = in.nextLine();
 
